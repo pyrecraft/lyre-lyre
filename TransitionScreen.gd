@@ -2,16 +2,12 @@ extends ColorRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#	if store.get_state()['game']['display_scene'] == utils.DisplayScene.PLAYING:
-#		self.queue_free()
-#		return
 	$TextHoldTimer.connect("timeout", self, "_on_TextHoldTimer_timeout")
 	$DestroyTimer.connect("timeout", self, "_on_DestroyTimer_timeout")
 	$SetScenePlayingTimer.connect("timeout", self, "_on_SetScenePlayingTimer_timeout")
 
 	$AnimationPlayer.play("Fade In")
 	$TextHoldTimer.start()
-#	$SetScenePlayingTimer.start()
 	store.dispatch(action_creators.game_set_display_scene(utils.DisplayScene.PLAYING))
 
 func set_text(text):

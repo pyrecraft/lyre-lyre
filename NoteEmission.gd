@@ -17,5 +17,5 @@ func _process(delta):
 	scale.x += delta
 	scale.y += delta
 	modulate.a -= delta
-	if scale.x > 1 and scale.y > 1:
+	if scale.x > 1.3 and scale.y > 1.3:
 		self.queue_free()

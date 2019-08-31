@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/cloud.png" type="Texture" id=1]
+[ext_resource path="res://Cloud.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 16.3893
+height = 71.7508
+
+[node name="Cloud" type="Sprite"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3.30092, 0.18338 )
+rotation = 1.57041
+shape = SubResource( 1 )
+disabled = true

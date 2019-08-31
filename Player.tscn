@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pheasant-spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://PolyphonyAudioManager.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sprites/single-musical-note.png" type="Texture" id=4]
 [ext_resource path="res://BeatCounter.tscn" type="PackedScene" id=5]
-[ext_resource path="res://BeatTracker.tscn" type="PackedScene" id=6]
+[ext_resource path="res://NoteTracker.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Life.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Clock.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.6437
@@ -165,9 +167,16 @@ drag_margin_bottom = 0.3
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="BeatCounter" parent="Camera2D/CanvasLayer" instance=ExtResource( 5 )]
+visible = false
 margin_left = 57.8548
 margin_top = 56.2816
 margin_right = 98.2809
 margin_bottom = 96.2816
 
-[node name="BeatTracker" parent="Camera2D/CanvasLayer" instance=ExtResource( 6 )]
+[node name="NoteTracker" parent="Camera2D/CanvasLayer" instance=ExtResource( 6 )]
+position = Vector2( 512, 87.545 )
+
+[node name="Life" parent="Camera2D/CanvasLayer" instance=ExtResource( 7 )]
+
+[node name="Clock" parent="Camera2D/CanvasLayer" instance=ExtResource( 8 )]
+position = Vector2( 936.69, 531.368 )

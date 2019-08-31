@@ -1,46 +1,195 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Keyboard.gd" type="Script" id=1]
 [ext_resource path="res://sprites/piano/keyboard-low-c1.png" type="Texture" id=2]
-[ext_resource path="res://sprites/piano/keyboard-d1.png" type="Texture" id=3]
-[ext_resource path="res://sprites/piano/keyboard-e1.png" type="Texture" id=4]
-[ext_resource path="res://sprites/piano/keyboard-f1.png" type="Texture" id=5]
-[ext_resource path="res://sprites/piano/keyboard-g1.png" type="Texture" id=6]
-[ext_resource path="res://sprites/piano/keyboard-a1.png" type="Texture" id=7]
-[ext_resource path="res://sprites/piano/keyboard-b1.png" type="Texture" id=8]
-[ext_resource path="res://sprites/piano/keyboard-high-c1.png" type="Texture" id=9]
+[ext_resource path="res://fonts/coolvetica rg.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://sprites/piano/keyboard-d1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/piano/keyboard-e1.png" type="Texture" id=5]
+[ext_resource path="res://sprites/piano/keyboard-f1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/piano/keyboard-g1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/piano/keyboard-a1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/piano/keyboard-b1.png" type="Texture" id=9]
+[ext_resource path="res://sprites/piano/keyboard-high-c1.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
 
 [node name="Keyboard" type="Node"]
 script = ExtResource( 1 )
 
 [node name="keyboard-low-c1" type="Sprite" parent="."]
-position = Vector2( 1041.84, 479.681 )
+position = Vector2( 1039.9, 480.938 )
 texture = ExtResource( 2 )
 
-[node name="keyboard-d1" type="Sprite" parent="."]
-position = Vector2( 1072.84, 479.681 )
-texture = ExtResource( 3 )
+[node name="ColorRect" type="ColorRect" parent="keyboard-low-c1"]
+margin_left = -9.70981
+margin_top = 5.98993
+margin_right = 9.29019
+margin_bottom = 24.9899
+color = Color( 1, 0.945098, 0.909804, 1 )
 
-[node name="keyboard-e1" type="Sprite" parent="."]
-position = Vector2( 1103.84, 479.681 )
+[node name="RichTextLabel" type="RichTextLabel" parent="keyboard-low-c1/ColorRect"]
+anchor_right = 1.0
+margin_left = 4.95419
+margin_top = -2.69196
+margin_right = 9.95419
+margin_bottom = 24.308
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "1"
+scroll_active = false
+
+[node name="keyboard-d1" type="Sprite" parent="."]
+position = Vector2( 1070.9, 480.938 )
 texture = ExtResource( 4 )
 
-[node name="keyboard-f1" type="Sprite" parent="."]
-position = Vector2( 1134.84, 479.681 )
+[node name="ColorRect" type="ColorRect" parent="keyboard-d1"]
+margin_left = -8.95865
+margin_top = 6.44061
+margin_right = 10.0414
+margin_bottom = 25.4406
+color = Color( 1, 0.945098, 0.909804, 1 )
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="keyboard-d1/ColorRect"]
+anchor_right = 1.0
+margin_left = 5.35172
+margin_top = -3.14264
+margin_right = 10.3517
+margin_bottom = 23.8574
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "2"
+scroll_active = false
+
+[node name="keyboard-e1" type="Sprite" parent="."]
+position = Vector2( 1101.9, 480.938 )
 texture = ExtResource( 5 )
 
-[node name="keyboard-g1" type="Sprite" parent="."]
-position = Vector2( 1165.84, 479.681 )
+[node name="ColorRect" type="ColorRect" parent="keyboard-e1"]
+margin_left = -8.05783
+margin_top = 5.94757
+margin_right = 10.9422
+margin_bottom = 24.9476
+color = Color( 1, 0.945098, 0.909804, 1 )
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="keyboard-e1/ColorRect"]
+anchor_right = 1.0
+margin_left = 3.68805
+margin_top = -2.6496
+margin_right = 8.68805
+margin_bottom = 24.3504
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "3"
+scroll_active = false
+
+[node name="keyboard-f1" type="Sprite" parent="."]
+position = Vector2( 1132.9, 480.938 )
 texture = ExtResource( 6 )
 
-[node name="keyboard-a1" type="Sprite" parent="."]
-position = Vector2( 1196.84, 479.82 )
+[node name="ColorRect" type="ColorRect" parent="keyboard-f1"]
+margin_left = -10.1437
+margin_top = 6.44061
+margin_right = 8.85632
+margin_bottom = 25.4406
+color = Color( 1, 0.945098, 0.909804, 1 )
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="keyboard-f1/ColorRect"]
+anchor_right = 1.0
+margin_left = 4.83728
+margin_top = -3.14264
+margin_right = 9.83728
+margin_bottom = 23.8574
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "4"
+scroll_active = false
+
+[node name="keyboard-g1" type="Sprite" parent="."]
+position = Vector2( 1163.9, 480.938 )
 texture = ExtResource( 7 )
 
-[node name="keyboard-b1" type="Sprite" parent="."]
-position = Vector2( 1227.84, 479.681 )
+[node name="ColorRect" type="ColorRect" parent="keyboard-g1"]
+margin_left = -9.17218
+margin_top = 6.51129
+margin_right = 9.82782
+margin_bottom = 25.5113
+color = Color( 1, 0.945098, 0.909804, 1 )
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="keyboard-g1/ColorRect"]
+anchor_right = 1.0
+margin_left = 5.18823
+margin_top = -3.21332
+margin_right = 10.1882
+margin_bottom = 23.7867
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "5"
+scroll_active = false
+
+[node name="keyboard-a1" type="Sprite" parent="."]
+position = Vector2( 1194.9, 481.077 )
 texture = ExtResource( 8 )
 
-[node name="keyboard-high-c1" type="Sprite" parent="."]
-position = Vector2( 1258.84, 479.681 )
+[node name="ColorRect" type="ColorRect" parent="keyboard-a1"]
+margin_left = -8.69379
+margin_top = 6.83713
+margin_right = 10.3062
+margin_bottom = 25.8371
+color = Color( 1, 0.945098, 0.909804, 1 )
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="keyboard-a1/ColorRect"]
+anchor_right = 1.0
+margin_left = 3.94696
+margin_top = -3.67813
+margin_right = 8.94696
+margin_bottom = 23.3219
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "6"
+scroll_active = false
+
+[node name="keyboard-b1" type="Sprite" parent="."]
+position = Vector2( 1225.9, 480.938 )
 texture = ExtResource( 9 )
+
+[node name="ColorRect" type="ColorRect" parent="keyboard-b1"]
+margin_left = -8.85388
+margin_top = 6.78824
+margin_right = 10.1461
+margin_bottom = 25.7882
+color = Color( 1, 0.945098, 0.909804, 1 )
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="keyboard-b1/ColorRect"]
+anchor_right = 1.0
+margin_left = 5.25574
+margin_top = -3.49026
+margin_right = 10.2557
+margin_bottom = 23.5097
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "7"
+scroll_active = false
+
+[node name="keyboard-high-c1" type="Sprite" parent="."]
+position = Vector2( 1256.9, 480.938 )
+texture = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="keyboard-high-c1"]
+margin_left = -8.95337
+margin_top = 5.28073
+margin_right = 10.0466
+margin_bottom = 24.2807
+color = Color( 1, 0.945098, 0.909804, 1 )
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="keyboard-high-c1/ColorRect"]
+anchor_right = 1.0
+margin_left = 4.93994
+margin_top = -1.98276
+margin_right = 9.93994
+margin_bottom = 25.0172
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "8"
+scroll_active = false

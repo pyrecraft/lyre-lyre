@@ -1,148 +1,53 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sprites/notes-tracker.png" type="Texture" id=1]
+[ext_resource path="res://BeatTracker.gd" type="Script" id=2]
+[ext_resource path="res://sprites/background-color.png" type="Texture" id=3]
+[ext_resource path="res://BeatContainer.tscn" type="PackedScene" id=4]
 
-[node name="BeatTracker" type="Node2D"]
-
-[node name="Border" type="Node2D" parent="."]
-editor/display_folded = true
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Border"]
-margin_left = 240.0
-margin_top = 496.0
-margin_right = 798.0
-margin_bottom = 502.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="ColorRect2" type="ColorRect" parent="Border"]
-margin_left = 240.0
-margin_top = 544.0
-margin_right = 798.0
-margin_bottom = 550.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="ColorRect3" type="ColorRect" parent="Border"]
-margin_left = 240.0
-margin_top = 496.0
-margin_right = 246.0
-margin_bottom = 544.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="ColorRect4" type="ColorRect" parent="Border"]
-margin_left = 792.0
-margin_top = 496.0
-margin_right = 798.0
-margin_bottom = 544.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="Notes" type="Node2D" parent="."]
-editor/display_folded = true
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Notes"]
-margin_left = 246.0
-margin_top = 502.0
-margin_right = 288.0
-margin_bottom = 544.0
-
-[node name="ColorRect5" type="ColorRect" parent="Notes"]
-margin_left = 414.0
-margin_top = 502.0
-margin_right = 456.0
-margin_bottom = 544.0
-
-[node name="ColorRect3" type="ColorRect" parent="Notes"]
-margin_left = 330.0
-margin_top = 502.0
-margin_right = 372.0
-margin_bottom = 544.0
-
-[node name="ColorRect8" type="ColorRect" parent="Notes"]
-margin_left = 498.374
-margin_top = 502.0
-margin_right = 530.374
-margin_bottom = 566.0
-color = Color( 0.14902, 0.752941, 0.215686, 1 )
-
-[node name="ColorRect2" type="ColorRect" parent="Notes"]
-margin_left = 288.0
-margin_top = 502.199
-margin_right = 330.0
-margin_bottom = 544.199
-
-[node name="ColorRect6" type="ColorRect" parent="Notes"]
-margin_left = 456.384
-margin_top = 502.0
-margin_right = 498.384
-margin_bottom = 544.0
-
-[node name="ColorRect4" type="ColorRect" parent="Notes"]
-margin_left = 372.0
-margin_top = 502.0
-margin_right = 414.0
-margin_bottom = 544.0
-color = Color( 0.356863, 0.101961, 0.101961, 1 )
-
-[node name="ColorRect7" type="ColorRect" parent="Notes"]
-margin_left = 540.426
-margin_top = 502.0
-margin_right = 582.426
-margin_bottom = 544.0
-rect_pivot_offset = Vector2( 44.3861, 33.645 )
-
-[node name="ColorRect10" type="ColorRect" parent="Notes"]
-margin_left = 624.0
-margin_top = 502.0
-margin_right = 666.0
-margin_bottom = 544.0
-rect_pivot_offset = Vector2( 44.3861, 33.645 )
-
-[node name="ColorRect13" type="ColorRect" parent="Notes"]
-margin_left = 708.0
-margin_top = 502.0
-margin_right = 750.0
-margin_bottom = 544.0
-rect_pivot_offset = Vector2( 44.3861, 33.645 )
-
-[node name="ColorRect9" type="ColorRect" parent="Notes"]
-margin_left = 582.426
-margin_top = 502.0
-margin_right = 624.426
-margin_bottom = 544.0
-rect_pivot_offset = Vector2( 44.3861, 33.645 )
-color = Color( 0.0705882, 0.176471, 0.4, 1 )
-
-[node name="ColorRect11" type="ColorRect" parent="Notes"]
-margin_left = 666.0
-margin_top = 502.0
-margin_right = 708.0
-margin_bottom = 544.0
-rect_pivot_offset = Vector2( 44.3861, 33.645 )
-
-[node name="ColorRect12" type="ColorRect" parent="Notes"]
-margin_left = 749.616
-margin_top = 502.0
-margin_right = 791.616
-margin_bottom = 544.0
-rect_pivot_offset = Vector2( 44.3861, 33.645 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-margin_left = 517.446
-margin_top = 480.101
-margin_right = 523.446
-margin_bottom = 560.101
-color = Color( 0, 0, 0, 1 )
-
-[node name="Notes Border" type="Sprite" parent="."]
+[node name="BeatTracker" type="Sprite"]
 position = Vector2( 482.38, 391.093 )
 texture = ExtResource( 1 )
 offset = Vector2( 29.6201, 108.907 )
+script = ExtResource( 2 )
 
-[node name="ColorRect" type="ColorRect" parent="Notes Border"]
+[node name="Background" type="Sprite" parent="."]
 show_behind_parent = true
-margin_left = -158.0
-margin_top = 68.0
-margin_right = 218.0
-margin_bottom = 150.0
+position = Vector2( 29.7095, 109 )
+scale = Vector2( 0.369443, 0.138693 )
+texture = ExtResource( 3 )
+
+[node name="BorderSprite" parent="." instance=ExtResource( 4 )]
+position = Vector2( -138.617, 108.816 )
+
+[node name="BorderSprite2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -96.3329, 108.816 )
+
+[node name="BorderSprite3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -53.9234, 108.816 )
+
+[node name="BorderSprite4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -11.9761, 108.723 )
+
+[node name="BorderSprite5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 29.8757, 108.816 )
+
+[node name="BorderSprite6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 71.5484, 108.816 )
+
+[node name="BorderSprite7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 113.33, 108.816 )
+
+[node name="BorderSprite8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 155.529, 108.816 )
+
+[node name="BorderSprite9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 197.806, 108.439 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.407843 )
+margin_left = 28.2595
+margin_top = 53.3893
+margin_right = 31.2595
+margin_bottom = 164.389
+color = Color( 0, 0, 0, 1 )

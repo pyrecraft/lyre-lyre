@@ -43,7 +43,6 @@ texture = ExtResource( 6 )
 [node name="parallax-far-trees" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color( 1, 1, 1, 0.32549 )
 position = Vector2( 699.972, 204.754 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 7 )
 region_enabled = true
 region_rect = Rect2( 2, 2, 3000, 1000 )
@@ -59,5 +58,5 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 1500, 1000 )
 
 [node name="PortalParticles" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1873.63, 380.979 )
+position = Vector2( 1871.68, 360.95 )
 z_index = 2

@@ -40,6 +40,8 @@ func _physics_process(delta):
 	clamp_pos_to_screen()
 
 func _input(event):
+	if Input.is_key_pressed(KEY_R):
+		store.dispatch(action_creators.game_set_display_scene(utils.DisplayScene.DEATH))
 	if event.is_pressed() and not event.is_echo() and utils.is_playing_lyre():
 		if Input.is_key_pressed(utils.keys[0]):
 			var add_note = note_emission.instance()
@@ -83,7 +85,7 @@ func _on_store_changed(name, state):
 	if state.has('walk_speed'):
 		walk_speed = state['walk_speed']
 	if state.has('jump_speed'):
-		jump_speed = state['jump_speed']	
+		jump_speed = state['jump_speed']
 
 func handle_animation():
 	if velocity.x != 0:

@@ -2,16 +2,16 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	set_background_neutral()
 
 func set_background_neutral():
-	$BorderSprite/Background.modulate = Color("787878")
+	$Background.modulate = Color("323c39")
 
 func set_background_success():
-	$BorderSprite/Background.modulate = Color("55a049")
+	$Background.modulate = Color("55a049")
 
 func set_background_failure():
-	$BorderSprite/Background.modulate = Color("883932")
+	$Background.modulate = Color("883932")
 
 func set_single_note(note):
 	$SingleNote.visible = true

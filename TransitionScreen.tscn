@@ -35,10 +35,10 @@ script = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color( 1, 0.945098, 0.909804, 1 )
-margin_left = 201.626
-margin_top = 49.374
-margin_right = 849.0
-margin_bottom = 345.374
+margin_left = 48.2623
+margin_top = 51.2519
+margin_right = 695.636
+margin_bottom = 347.252
 size_flags_horizontal = 2
 custom_fonts/normal_font = SubResource( 1 )
 text = "Chapter Zero

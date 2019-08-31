@@ -24,35 +24,51 @@ func _ready():
 func _process(delta):
 	if $"keyboard-low-c1".texture == low_c_texture_active and !Input.is_key_pressed(utils.keys[0]):
 		$"keyboard-low-c1".texture = default_key_textures[0]
+		$"keyboard-low-c1/ColorRect".color = Color("fff1e8")
 	if $"keyboard-d1".texture == d_texture_active and !Input.is_key_pressed(utils.keys[1]):
 		$"keyboard-d1".texture = default_key_textures[1]
+		$"keyboard-d1/ColorRect".color = Color("fff1e8")
 	if $"keyboard-e1".texture == e_texture_active and !Input.is_key_pressed(utils.keys[2]):
 		$"keyboard-e1".texture = default_key_textures[2]
+		$"keyboard-e1/ColorRect".color = Color("fff1e8")
 	if $"keyboard-f1".texture == f_texture_active and !Input.is_key_pressed(utils.keys[3]):
 		$"keyboard-f1".texture = default_key_textures[3]
+		$"keyboard-f1/ColorRect".color = Color("fff1e8")
 	if $"keyboard-g1".texture == g_texture_active and !Input.is_key_pressed(utils.keys[4]):
 		$"keyboard-g1".texture = default_key_textures[4]
+		$"keyboard-g1/ColorRect".color = Color("fff1e8")
 	if $"keyboard-a1".texture == a_texture_active and !Input.is_key_pressed(utils.keys[5]):
 		$"keyboard-a1".texture = default_key_textures[5]
+		$"keyboard-a1/ColorRect".color = Color("fff1e8")
 	if $"keyboard-b1".texture == b_texture_active and !Input.is_key_pressed(utils.keys[6]):
 		$"keyboard-b1".texture = default_key_textures[6]
+		$"keyboard-b1/ColorRect".color = Color("fff1e8")
 	if $"keyboard-high-c1".texture == high_c_texture_active and !Input.is_key_pressed(utils.keys[7]):
 		$"keyboard-high-c1".texture = default_key_textures[7]
+		$"keyboard-high-c1/ColorRect".color = Color("fff1e8")
 
 func _input(event):
 	if Input.is_key_pressed(utils.keys[0]) and $"keyboard-low-c1".texture == default_key_textures[0]:
 		$"keyboard-low-c1".texture = low_c_texture_active
+		$"keyboard-low-c1/ColorRect".color = Color("b86962")
 	if Input.is_key_pressed(utils.keys[1]) and $"keyboard-d1".texture == default_key_textures[1]:
 		$"keyboard-d1".texture = d_texture_active
+		$"keyboard-d1/ColorRect".color = Color("b86962")
 	if Input.is_key_pressed(utils.keys[2]) and $"keyboard-e1".texture == default_key_textures[2]:
 		$"keyboard-e1".texture = e_texture_active
+		$"keyboard-e1/ColorRect".color = Color("b86962")
 	if Input.is_key_pressed(utils.keys[3]) and $"keyboard-f1".texture == default_key_textures[3]:
 		$"keyboard-f1".texture = f_texture_active
+		$"keyboard-f1/ColorRect".color = Color("b86962")
 	if Input.is_key_pressed(utils.keys[4]) and $"keyboard-g1".texture == default_key_textures[4]:
 		$"keyboard-g1".texture = g_texture_active
+		$"keyboard-g1/ColorRect".color = Color("b86962")
 	if Input.is_key_pressed(utils.keys[5]) and $"keyboard-a1".texture == default_key_textures[5]:
 		$"keyboard-a1".texture = a_texture_active
+		$"keyboard-a1/ColorRect".color = Color("b86962")
 	if Input.is_key_pressed(utils.keys[6]) and $"keyboard-b1".texture == default_key_textures[6]:
 		$"keyboard-b1".texture = b_texture_active
+		$"keyboard-b1/ColorRect".color = Color("b86962")
 	if Input.is_key_pressed(utils.keys[7]) and $"keyboard-high-c1".texture == default_key_textures[7]:
 		$"keyboard-high-c1".texture = high_c_texture_active
+		$"keyboard-high-c1/ColorRect".color = Color("b86962")
