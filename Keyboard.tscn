@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Keyboard.gd" type="Script" id=1]
+[ext_resource path="res://sprites/piano/keyboard-low-c1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/piano/keyboard-d1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/piano/keyboard-e1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/piano/keyboard-f1.png" type="Texture" id=5]
+[ext_resource path="res://sprites/piano/keyboard-g1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/piano/keyboard-a1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/piano/keyboard-b1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/piano/keyboard-high-c1.png" type="Texture" id=9]
+
+[node name="Keyboard" type="Node"]
+script = ExtResource( 1 )
+
+[node name="keyboard-low-c1" type="Sprite" parent="."]
+position = Vector2( 1041.84, 479.681 )
+texture = ExtResource( 2 )
+
+[node name="keyboard-d1" type="Sprite" parent="."]
+position = Vector2( 1072.84, 479.681 )
+texture = ExtResource( 3 )
+
+[node name="keyboard-e1" type="Sprite" parent="."]
+position = Vector2( 1103.84, 479.681 )
+texture = ExtResource( 4 )
+
+[node name="keyboard-f1" type="Sprite" parent="."]
+position = Vector2( 1134.84, 479.681 )
+texture = ExtResource( 5 )
+
+[node name="keyboard-g1" type="Sprite" parent="."]
+position = Vector2( 1165.84, 479.681 )
+texture = ExtResource( 6 )
+
+[node name="keyboard-a1" type="Sprite" parent="."]
+position = Vector2( 1196.84, 479.82 )
+texture = ExtResource( 7 )
+
+[node name="keyboard-b1" type="Sprite" parent="."]
+position = Vector2( 1227.84, 479.681 )
+texture = ExtResource( 8 )
+
+[node name="keyboard-high-c1" type="Sprite" parent="."]
+position = Vector2( 1258.84, 479.681 )
+texture = ExtResource( 9 )

@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://BeatContainer.gd" type="Script" id=1]
+[ext_resource path="res://sprites/single-note-42-84.png" type="Texture" id=2]
+[ext_resource path="res://fonts/coolvetica rg.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="BeatContainer" type="Node"]
+script = ExtResource( 1 )
+
+[node name="BorderSprite" type="Sprite" parent="."]
+position = Vector2( 21.3377, 42.0479 )
+texture = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="BorderSprite"]
+modulate = Color( 0.470588, 0.470588, 0.470588, 1 )
+show_behind_parent = true
+margin_left = -19.9083
+margin_top = -41.0
+margin_right = 20.0917
+margin_bottom = 41.0
+
+[node name="SingleNote" type="Node2D" parent="."]
+visible = false
+position = Vector2( 21.3377, 42.0479 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SingleNote"]
+margin_left = -5.98199
+margin_top = -16.85
+margin_right = 18.018
+margin_bottom = 7.14996
+custom_fonts/normal_font = SubResource( 1 )
+text = "1"
+scroll_active = false
+
+[node name="DoubleNote" type="Node2D" parent="."]
+visible = false
+
+[node name="RichTextLabelBottom" type="RichTextLabel" parent="DoubleNote"]
+margin_left = 16.7854
+margin_top = 45.3804
+margin_right = 40.7854
+margin_bottom = 69.3804
+custom_fonts/normal_font = SubResource( 1 )
+text = "1"
+scroll_active = false
+
+[node name="RichTextLabelTop" type="RichTextLabel" parent="DoubleNote"]
+margin_left = 16.9792
+margin_top = 4.42403
+margin_right = 40.9792
+margin_bottom = 28.424
+custom_fonts/normal_font = SubResource( 1 )
+text = "1"
+scroll_active = false
+
+[node name="ColorRect" type="ColorRect" parent="DoubleNote"]
+show_behind_parent = true
+margin_left = 1.4804
+margin_top = 40.1648
+margin_right = 41.4804
+margin_bottom = 42.1648
+color = Color( 0, 0, 0, 1 )
+
+[node name="TripleNote" type="Node2D" parent="."]
+visible = false
+position = Vector2( 21.3377, 42.0479 )
+
+[node name="RichTextLabelBottom" type="RichTextLabel" parent="TripleNote"]
+margin_left = -4.55229
+margin_top = 10.8183
+margin_right = 19.4477
+margin_bottom = 34.8183
+custom_fonts/normal_font = SubResource( 1 )
+text = "1"
+scroll_active = false
+
+[node name="RichTextLabelMiddle" type="RichTextLabel" parent="TripleNote"]
+margin_left = -4.55229
+margin_top = -15.8095
+margin_right = 19.4477
+margin_bottom = 8.19048
+custom_fonts/normal_font = SubResource( 1 )
+text = "1"
+scroll_active = false
+
+[node name="RichTextLabelTop" type="RichTextLabel" parent="TripleNote"]
+margin_left = -4.35849
+margin_top = -42.65
+margin_right = 19.6415
+margin_bottom = -18.65
+custom_fonts/normal_font = SubResource( 1 )
+text = "1"
+scroll_active = false
+
+[node name="ColorRectBottom" type="ColorRect" parent="TripleNote"]
+show_behind_parent = true
+margin_left = -19.8573
+margin_top = 12.3398
+margin_right = 20.1427
+margin_bottom = 14.3398
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRectTop" type="ColorRect" parent="TripleNote"]
+show_behind_parent = true
+margin_left = -19.8573
+margin_top = -13.8602
+margin_right = 20.1427
+margin_bottom = -11.8602
+color = Color( 0, 0, 0, 1 )

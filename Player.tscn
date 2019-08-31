@@ -1,0 +1,173 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://sprites/pheasant-spritesheet.png" type="Texture" id=2]
+[ext_resource path="res://PolyphonyAudioManager.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/single-musical-note.png" type="Texture" id=4]
+[ext_resource path="res://BeatCounter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://BeatTracker.tscn" type="PackedScene" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.6437
+height = 69.6709
+
+[sub_resource type="Animation" id=2]
+resource_name = "jump_and_play_lyre"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 15, 15, 16, 17, 18, 19 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12, 13, 14 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "walk_and_play_lyre"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 20, 21, 22, 23, 24, 25, 26, 27 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 513.974, 299.89 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+z_index = 1
+texture = ExtResource( 2 )
+hframes = 28
+frame = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/jump_and_play_lyre = SubResource( 2 )
+anims/jump_right = SubResource( 3 )
+anims/play_lyre = SubResource( 4 )
+anims/stand_right = SubResource( 5 )
+anims/walk_and_play_lyre = SubResource( 6 )
+anims/walk_right = SubResource( 7 )
+
+[node name="PolyphonyAudioManager" parent="." instance=ExtResource( 3 )]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( -3.18933, 14.0332 )
+emitting = false
+amount = 1
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource( 4 )
+emission_shape = 1
+emission_sphere_radius = 20.0
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 0.0
+initial_velocity_random = 1.0
+radial_accel = 500.0
+tangential_accel = 20.0
+tangential_accel_random = 1.0
+scale_amount = 1.5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+smoothing_enabled = true
+drag_margin_left = 0.0
+drag_margin_top = 0.3
+drag_margin_right = 0.0
+drag_margin_bottom = 0.3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="BeatCounter" parent="Camera2D/CanvasLayer" instance=ExtResource( 5 )]
+margin_left = 57.8548
+margin_top = 56.2816
+margin_right = 98.2809
+margin_bottom = 96.2816
+
+[node name="BeatTracker" parent="Camera2D/CanvasLayer" instance=ExtResource( 6 )]

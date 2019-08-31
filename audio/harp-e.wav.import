@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/harp-e.wav-37b3b3762c120aeb0a4eb99826c2f56b.sample"
+
+[deps]
+
+source_file="res://audio/harp-e.wav"
+dest_files=[ "res://.import/harp-e.wav-37b3b3762c120aeb0a4eb99826c2f56b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
